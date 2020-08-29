@@ -52,9 +52,9 @@ int main() {
 		std::string input;
 		std::getline(std::cin, input);
 		if (std::regex_match(input, std::regex("([0-9]+\\ )+[0-9]+")) || input.compare("q") == 0) {
-			if (input.compare("q") == 0) {
+			if(input.compare("q") == 0){
 				return 1;
-			}
+            }
 
 			std::istringstream iss(input);
 			std::vector<std::string> numbers((std::istream_iterator<std::string>(iss)), std::istream_iterator<std::string>());
@@ -69,13 +69,11 @@ int main() {
 			for (int num : sorted) {
 				output = output + std::to_string(num) + " ";
 			}
-			std::cout << output << std::endl;
-
+			std::cout << output << std::endl;	
 		}
 		else {
 			std::cout << "input format error" << std::endl;
 		}
-
 	}
 	return 0;
 
