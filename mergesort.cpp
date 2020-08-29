@@ -51,7 +51,7 @@ int main() {
 
 		std::string input;
 		std::getline(std::cin, input);
-		if (std::regex_match(input, std::regex("([0-9]+\\ )+[0-9]+")) || input.compare("q") == 0) {
+		if (std::regex_match(input, std::regex("(-?[0-9]+\\ )+-?[0-9]+")) || input.compare("q") == 0) {
 			if(input.compare("q") == 0){
 				return 1;
             }
